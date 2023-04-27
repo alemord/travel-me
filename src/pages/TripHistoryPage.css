@@ -1,0 +1,80 @@
+.trip-history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .input {
+    padding: 0.5rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  
+  .clear-btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .clear-btn:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .cities-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2rem;
+  }
+  
+  .city-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 1rem;
+    position: relative; /* Add this line to make the city-name element position relative to the city-card element */
+  }
+  
+  .city-name {
+    font-size: 2.2rem;
+    text-align: center;
+    position: absolute;  
+    top: 10px;  
+    left: 0;  
+    right: 0;
+    margin: auto;
+    background-color: white;  
+    padding: 0 10px; 
+  }
+  
+  
+  .city-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  .city-image:hover {
+    cursor: pointer;
+  }
+ 
+  .city-description {
+    font-size: 1rem;
+    text-align: center;
+  }
+  

@@ -15,3 +15,4 @@ Update the remote's URL: git remote set-url origin <paste the copied GH url>
 Push for the first time: git push -u origin main
 Have fun coding your new project and don't forget to make frequent commits!# travel-me
 # travel-me
+# travel-me

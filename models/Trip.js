@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const tripSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
+    required: false,
   },
   location: {
     type: String,
-    required: true,
+    required: false,
   },
   startDate: {
     type: Date,
@@ -19,7 +19,7 @@ const tripSchema = new mongoose.Schema({
   },
   budget: {
     type: Number,
-    required: true,
+    required: false,
   },
   notes: {
     type: String,
@@ -27,7 +27,7 @@ const tripSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-    required: true,
+    required: false,
   },
 });
 

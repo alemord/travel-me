@@ -8,7 +8,7 @@ const logger = require("morgan");
 const app = express();
 // development port: 3001
 // in production we'll a PORT number set in the environment variables
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 
 //* Config
 // Logger middleware
@@ -16,6 +16,7 @@ app.use(logger("dev"));
 // JSON payload middleware (for data coming from frontend functions)
 app.use(express.json());
 // Configure both serve-favicon & static middleware
+
 // to serve from the production 'build' folder
 app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
 app.use(express.static(path.join(__dirname, "build")));

@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif; /* add a custom font */
+  }
+  
+  .navbar__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+    transition: all 0.3s ease; /* add a transition effect */
+  }
+  
+  .navbar__link:hover {
+    text-decoration: underline;
+    transform: scale(1.2); /* add a scale effect */
+  }
+  
+  .navbar__greeting {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase; /* add uppercase text */
+    letter-spacing: 2px; /* add letter spacing */
+  }
+  

@@ -97,11 +97,15 @@ function TripHistoryPage() {
           Clear
         </button>
       </form>
-      <div className="cities-container">
-        {cities.map((city) => (
-          <div key={city.name} className="city-card">
+      <div className="city-container">
+        {cities.map((city, index) => (
+          <div className="city-card" key={index}>
             <img className="city-image" src={city.image} alt={city.name} />
-            <p className="city-description">{city.description}</p>
+            <div className="city-info">
+              <h2>{city.name}</h2>
+              <p>{city.description}</p>
+              <a href={city.wikipediaUrl} target="_blank" rel="noopener noreferrer">Learn more on Wikipedia</a>
+            </div>
           </div>
         ))}
       </div>

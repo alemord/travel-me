@@ -9,6 +9,7 @@ function NavBar({ user, setUser }) {
   };
   return (
     <nav className="navbar">
+      <img src="https://www.eu-startups.com/wp-content/uploads/2014/08/tripme-logo.jpg" alt="Logo" />
             <span></span>
 
       <Link to="/orders" className="navbar__link">

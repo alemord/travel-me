@@ -18,7 +18,7 @@ function NewTripPage() {
     // fetch the list of trips on component mount
     async function fetchTrips() {
       try {
-        const response = await axios.get("/api/trips");
+        const response = await axios.get("/orders/new");
         setTrips(response.data);
       } catch (error) {
         console.error(error);
@@ -82,8 +82,8 @@ function NewTripPage() {
 
 
   return (
-    <div>
-      <h1>Add & Schedule Your Trip</h1>
+<div className="container">
+        <h1>Add & Schedule Your Trip</h1>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Trip Details</legend>

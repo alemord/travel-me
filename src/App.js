@@ -10,6 +10,7 @@ import NavBar from './components/NavBar';
 import { getUser } from './utilities/users-service';
 
 import './App.css';
+import MyScheduledTrips from './pages/MyScheduledTrips';
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path='/orders/new' element={ <NewTripPage /> }/>
         <Route path='/orders' element={ <OrderHistoryPage /> }/>
+        <Route path='/orders/saved' element={ <MyScheduledTrips /> }/>
       </Routes>
       </>
      : 

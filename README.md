@@ -10,13 +10,13 @@ All of a user's saved trips are displayed in a list, making it easy to view and 
 
 # Tech Stack
 
-| Technology                                            | Description      |
-| ----------------------------------------------------- | ---------------- |
-| ![MongoDB Logo](https://example.com/mongodb-logo.png) | MongoDB/Mongoose |
-| ![Express Logo](https://example.com/express-logo.png) | Express          |
-| ![React Logo](https://example.com/react-logo.png)     | React            |
-| ![Node.js Logo](https://example.com/nodejs-logo.png)  | Node.js          |
-| ![CSS Logo](https://example.com/css-logo.png)         | CSS              |
+| Technology      | Description      |
+| --------------- | ---------------- |
+| ![MongoDB Logo] | MongoDB/Mongoose |
+| ![Express Logo] | Express          |
+| ![React Logo]   | React            |
+| ![Node.js Logo] | Node.js          |
+| ![CSS Logo]     | CSS              |
 
 # Features
 

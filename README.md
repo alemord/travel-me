@@ -1,4 +1,5 @@
 # Trip-Me
+
 ![Screenshot](ASSETS/trip-me.png)
 
 Trip-me is a web application designed to help users manage their travel experiences. It is built on a CRUD (Create, Read, Update, Delete) model, which means that users can perform the four basic types of database operations on their trips.
@@ -7,14 +8,15 @@ With Trip-Me, users can add new trips to their profile by entering details such 
 
 All of a user's saved trips are displayed in a list, making it easy to view and manage multiple trips at once. The list includes details such as the trip title, description, location, start date, and end date, allowing users to quickly identify and select the trip they are looking for.
 
-
 # Tech Stack
-MongoDB/Mongoose
-Express
-React
-Node.js
-CSS
 
+| Technology                                            | Description      |
+| ----------------------------------------------------- | ---------------- |
+| ![MongoDB Logo](https://example.com/mongodb-logo.png) | MongoDB/Mongoose |
+| ![Express Logo](https://example.com/express-logo.png) | Express          |
+| ![React Logo](https://example.com/react-logo.png)     | React            |
+| ![Node.js Logo](https://example.com/nodejs-logo.png)  | Node.js          |
+| ![CSS Logo](https://example.com/css-logo.png)         | CSS              |
 
 # Features
 
@@ -24,13 +26,11 @@ Delete existing trips: Users can delete saved trips by clicking the "Delete" but
 View list of saved trips: Users can view a list of their saved trips with details such as title, description, location, start date, and end date.
 Search: Explore destinations around the world and get inspired.
 
-
 # Upcoming Features
 
 1-Chatbot for messaging with customers: Add a chatbot feature that allows users to communicate with a customer service representative.
 2-Flight price comparison: Add a feature that allows users to compare prices of flights from different airlines.
 3-Payment handling services: Add a feature that allows users to make payments for their trips.
-
 
 ### WireFrame
 

@@ -1,5 +1,5 @@
 # Trip-Me
-![Screenshot](trip-me.png)
+![Screenshot](ASSETS/trip-me.png)
 
 Trip-me is a web application designed to help users manage their travel experiences. It is built on a CRUD (Create, Read, Update, Delete) model, which means that users can perform the four basic types of database operations on their trips.
 

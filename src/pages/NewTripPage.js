@@ -10,7 +10,8 @@ function NewTripPage() {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [notes, setNotes] = useState("");
-  const [userId, setUserId] = useState("");  
+  // eslint-disable-next-line
+  const [userId, setUserId] = useState("");
   const [formErrors, setFormErrors] = useState({});
   const [trips, setTrips] = useState([]);
 
@@ -65,6 +66,9 @@ function NewTripPage() {
       console.log(response.data); // log the newly created trip object
       setTrips([...trips, response.data]); // add the new trip to the array
   
+      // show confirmation message
+      alert("Trip added successfully!");
+  
       // clear the form data
       setBudget("");
       setLocation("");
@@ -77,13 +81,10 @@ function NewTripPage() {
       console.error(error);
     }
   };
-  
-
-
 
   return (
-<div className="container">
-        <h1>Add & Schedule Your Trip</h1>
+    <div className="container">
+      <h1>Add & Schedule Your Trip</h1>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Trip Details</legend>
@@ -92,7 +93,7 @@ function NewTripPage() {
             <input
               type="text"
               id="budget"
-              value={budget}
+              name={budget}
               onChange={(event) => setBudget(event.target.value)}
             />
             {formErrors.budget && (
@@ -104,7 +105,7 @@ function NewTripPage() {
             <input
               type="text"
               id="location"
-              value={location}
+              name={location}
               onChange={(event) => setLocation(event.target.value)}
             />
             {formErrors.location && (
@@ -116,53 +117,52 @@ function NewTripPage() {
             <input
               type="text"
               id="title"
-              value={title}
+              name={title}
               onChange={(event) => setTitle(event.target.value)}
             />
-            {formErrors.title &&
-(
-  <div className="error">{formErrors.title}</div>
-  )}
-  </div>
-  <div>
-  <label htmlFor="startDate">Start Date:</label>
-  <DatePicker
-  id="startDate"
-  selected={startDate}
-  onChange={(date) => setStartDate(date)}
-  dateFormat="dd/MM/yyyy"
-  />
-  {formErrors.startDate && (
-  <div className="error">{formErrors.startDate}</div>
-  )}
-  </div>
-  <div>
-  <label htmlFor="endDate">End Date:</label>
-  <DatePicker
-  id="endDate"
-  selected={endDate}
-  onChange={(date) => setEndDate(date)}
-  dateFormat="dd/MM/yyyy"
-  />
-  {formErrors.endDate && (
-  <div className="error">{formErrors.endDate}</div>
-  )}
-  </div>
-  <div>
-  <label htmlFor="notes">Notes:</label>
-  <textarea
-  id="notes"
-  value={notes}
-  onChange={(event) => setNotes(event.target.value)}
-  />
-  </div>
-  <div>
-  <input type="submit" value="Add Trip" />
-  </div>
-  </fieldset>
-  </form>
-  </div>
+            {formErrors.title && (
+              <div className="error">{formErrors.title}</div>
+            )}
+          </div>
+          <div>
+            <label htmlFor="startDate">Start Date:</label>
+            <DatePicker
+              id="startDate"
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              dateFormat="dd/MM/yyyy"
+            />
+            {formErrors.startDate && (
+              <div className="error">{formErrors.startDate}</div>
+            )}
+          </div>
+          <div>
+            <label htmlFor="endDate">End Date:</label>
+            <DatePicker
+              id="endDate"
+              selected={endDate}
+              onChange={(date) => setEndDate(date)}
+              dateFormat="dd/MM/yyyy"
+            />
+            {formErrors.endDate && (
+              <div className="error">{formErrors.endDate}</div>
+            )}
+          </div>
+          <div>
+            <label htmlFor="notes">Notes:</label>
+            <textarea
+              id="notes"
+              value={notes}
+              onChange={(event) => setNotes(event.target.value)}
+            />
+          </div>
+          <div>
+            <input type="submit" value="Add Trip" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
   );
-  }
-  
-  export default NewTripPage;
+}
+
+export default NewTripPage;

@@ -18,6 +18,15 @@ function MyScheduleTrips({ userId }) {
     fetchTrips();
   }, [userId]);
 
+  async function handleDeleteTrip(tripId) {
+    try {
+      await axios.delete(`/api/trips/${tripId}`);
+      setTrips(trips.filter(trip => trip.id !== tripId));
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div>
       <h1>My Scheduled Trips</h1>
@@ -30,6 +39,7 @@ function MyScheduleTrips({ userId }) {
             <p>End Date: {trip.endDate}</p>
             <p>Budget: {trip.budget}</p>
             <p>Notes: {trip.notes}</p>
+            <button onClick={() => handleDeleteTrip(trip.id)}>Delete</button>
           </li>
         ))}
       </ul>

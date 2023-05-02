@@ -46,7 +46,7 @@
     align-items: center;
     border: 1px solid black;
     padding: 1rem;
-    position: relative; /* Add this line to make the city-name element position relative to the city-card element */
+    position: relative; 
   }
   
   .city-name {
@@ -78,3 +78,7 @@
     text-align: center;
   }
   
+  .search-bar {
+    display: flex;
+    justify-content: center;
+  }

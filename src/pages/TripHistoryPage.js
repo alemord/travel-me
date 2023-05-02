@@ -83,20 +83,20 @@ function TripHistoryPage() {
   return (
     <div className="trip-history-container">
       <h1 className="title">Explore Destinations</h1>
-      <form onSubmit={(event) => event.preventDefault()}>
-        <label>
-          City:
-          <input
-            className="input"
-            type="text"
-            value={city}
-            onChange={(event) => setCity(event.target.value)}
-          />
-        </label>
-        <button className="clear-btn" type="button" onClick={() => setCity("")}>
-          Clear
-        </button>
-      </form>
+      <form
+  onSubmit={(e) => {
+    e.preventDefault();
+    window.open(`https://www.google.com/search?q=${city}`, "_blank");
+  }}
+>
+  <input
+    type="text"
+    value={city}
+    onChange={(e) => setCity(e.target.value)}
+    placeholder="Search City/Country"
+  />
+  <button type="submit">Search</button>
+</form>
       <div className="city-container">
         {cities.map((city, index) => (
           <div className="city-card" key={index}>
@@ -104,7 +104,7 @@ function TripHistoryPage() {
             <div className="city-info">
               <h2>{city.name}</h2>
               <p>{city.description}</p>
-              <a href={city.wikipediaUrl} target="_blank" rel="noopener noreferrer">Learn more on Wikipedia</a>
+              <a href={city.wikipediaUrl} target="_blank" rel="noopener noreferrer">Learn more...</a>
             </div>
           </div>
         ))}

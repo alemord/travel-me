@@ -1,7 +1,15 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;  
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+form {
+   
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+}

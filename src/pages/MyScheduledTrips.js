@@ -32,14 +32,15 @@ function MyScheduleTrips({ userId }) {
       <h1>My Scheduled Trips</h1>
       <ul>
         {trips.map((trip) => (
-          <li key={trip.id}>
+          <li key={trip._id}>
             <h2>{trip.title}</h2>
             <p>Location: {trip.location}</p>
             <p>Start Date: {trip.startDate}</p>
             <p>End Date: {trip.endDate}</p>
             <p>Budget: {trip.budget}</p>
             <p>Notes: {trip.notes}</p>
-            <button onClick={() => handleDeleteTrip(trip.id)}>Delete</button>
+            <button onClick={() => handleDeleteTrip(trip._id)}>Delete</button>
+
           </li>
         ))}
       </ul>

@@ -1,4 +1,5 @@
 # Trip-Me
+https://travel-me.herokuapp.com/
 
 ![Screenshot](ASSETS/trip-me.png)
 
@@ -44,6 +45,10 @@ https://trello.com/invite/b/TiTsAI3R/ATTId7a64167c73d64a196c91e34f523061d5E02D2D
 ### ERD
 
 https://drive.google.com/file/d/13UkFsqoeURVeOmQZTuM2kH5lZ-R6asaJ/view?usp=sharing
+
+### Deployed with Heroku
+
+https://travel-me.herokuapp.com/
 
 ### Thank You
 

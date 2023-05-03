@@ -103,6 +103,7 @@ function MyScheduleTrips({ userId }) {
               setEditingTrip({ ...editingTrip, endDate: e.target.value })
             }
           />
+          
           <input
             type="number"
             value={editingTrip.budget}

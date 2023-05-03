@@ -4,7 +4,7 @@ const express = require("express");
 const path = require("path"); // node module
 const favicon = require("serve-favicon");
 const logger = require("morgan");
-
+const cors = require('cors');
 const app = express();
 // development port: 3001
 // in production we'll a PORT number set in the environment variables
@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 3001;
 
 //* Config
 // Logger middleware
+app.use (cors ())
 app.use(logger("dev"));
 // JSON payload middleware (for data coming from frontend functions)
 app.use(express.json());
